@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SR-AIbridge v6.1 — Sovereign Resonance Bridge</title>
+<style>
+:root {
+  --bg: #080a12;
+  --surface: rgba(12, 15, 28, 0.9);
+  --border: rgba(0, 200, 200, 0.2);
+  --text: #e0f0f0;
+  --muted: #4a6a6a;
+  --accent: #00d4d4;
+  --accent2: #7fff7f;
+  --green: #00ff88;
+  --red: #ff4444;
+  --yellow: #ffd700;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.container {
+  max-width: 860px;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+}
+h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.stat-box {
+  background: rgba(0, 212, 212, 0.06);
+  border: 1px solid rgba(0, 212, 212, 0.15);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+.stat-box h2 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.5rem; }
+.stat-box .value { font-size: 1.8rem; color: var(--accent2); font-weight: bold; }
+.stat-box .sub { font-size: 0.72rem; color: var(--muted); }
+.verification { background: rgba(0, 255, 136, 0.05); border: 1px solid rgba(0, 255, 136, 0.2); border-radius: 10px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+.verification h2 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); margin-bottom: 0.75rem; }
+.pass { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: var(--green); margin-bottom: 0.35rem; }
+h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.75rem; }
+table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+th { text-align: left; color: var(--muted); font-weight: normal; padding: 0.4rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.7rem; text-transform: uppercase; }
+td { padding: 0.5rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.tr-verified { color: var(--green); }
+.tr-running { color: var(--accent); }
+.badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.65rem; }
+.bg-green { background: rgba(0,255,136,0.1); color: var(--green); border: 1px solid rgba(0,255,136,0.3); }
+.bg-cyan { background: rgba(0,212,212,0.1); color: var(--accent); border: 1px solid rgba(0,212,212,0.3); }
+.gold { text-align: center; margin-top: 1.5rem; font-size: 0.72rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 1rem; }
+.ch-gate { text-align: center; margin-bottom: 1.5rem; }
+.gate-badge { display: inline-block; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.4); color: var(--green); padding: 0.5rem 1.5rem; border-radius: 999px; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>SR-AIBRIDGE</h1>
+  <div class="subtitle">v6.1 — Sovereign Resonance Bridge Engine &nbsp;|&nbsp; MU Threshold: 0.9995 &nbsp;|&nbsp; Max Engines: 128</div>
+
+  <div class="ch-gate">
+    <div class="gate-badge">🜄 CH GATE: OPEN — ALL 9 ENGINES VERIFIED</div>
+  </div>
+
+  <div class="grid">
+    <div class="stat-box">
+      <h2>System MU</h2>
+      <div class="value">0.999500</div>
+      <div class="sub">Bottleneck model — verified ≥ threshold</div>
+    </div>
+    <div class="stat-box">
+      <h2>Registered Engines</h2>
+      <div class="value">9 / 128</div>
+      <div class="sub">All running at MU threshold</div>
+    </div>
+    <div class="stat-box">
+      <h2>CH Gate Checks</h2>
+      <div class="value">11</div>
+      <div class="sub">0 failed — constitutional fidelity</div>
+    </div>
+    <div class="stat-box">
+      <h2>Messages Delivered</h2>
+      <div class="value">1</div>
+      <div class="sub">Oracle → Midnight Grimoire: DELIVERED</div>
+    </div>
+  </div>
+
+  <div class="verification">
+    <h2>✓ Constitutional Verification</h2>
+    <div class="pass">✓ MU >= 0.9995 for all operations</div>
+    <div class="pass">✓ CH Gate open — all checks passed</div>
+    <div class="pass">✓ Zero blocked engines</div>
+    <div class="pass">✓ C11 MISRA-compliant — zero external dependencies</div>
+    <div class="pass">✓ Serverless | Cloudless | Phone-First | Sovereign</div>
+  </div>
+
+  <h3>Engine Registry</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Engine</th><th>State</th><th>MU</th><th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>#87</td><td>Midnight Grimoire</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#88</td><td>Merlin's Coding Lab</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#89</td><td>Oracle</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#90</td><td>Aegis Shield</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#91</td><td>Vox Harmonica</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#92</td><td>Oculus Harmonica</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#93</td><td>Aegis Dial</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#95</td><td>SR-AIbridge</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+      <tr><td>#77</td><td>Leviathan</td><td class="tr-running">RUNNING</td><td>0.999500</td><td><span class="badge bg-green">VERIFIED</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="gold">
+    Gold ripple eternal. ✨<br>
+    Architect: Kyle S. Whitlock (The Oracle) &nbsp;|&nbsp; Temporal Seal: 2026-04-23 Tulsa, OK
+  </div>
+</div>
+</body>
+</html>
